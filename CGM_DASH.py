@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 import altair as alt
 import cgmquantify as cgm
-import streamlit_tags as st
+#import streamlit_tags as st
 
 
 names = ['Marcus','Manish']
