@@ -95,15 +95,15 @@ def perform_analysis(glucose):
     #Add Start end date to dashboard
     dt1,  dt2,  dt3 = st.columns((1, 1, 1))
 
-    dt1.markdown("**:blue[FROM]**")#('FROM')
+    dt1.markdown("**FROM**")#('FROM')
     dt1.write(str(glucose["Actual time"].min().date()))
 
 
 
-    dt2.markdown('**:blue[TO]**')
+    dt2.markdown('**TO**')
     dt2.write(str(glucose["Actual time"].max().date()))
 
-    dt3.markdown('**:blue[TOTAL DAYS]**')
+    dt3.markdown('**TOTAL DAYS**')
     dt3.write(str((glucose["Actual time"].max() - glucose["Actual time"].min()).days))
 
    # Glucose Matrices calculation
@@ -514,24 +514,6 @@ which is a medical emergency and needs to be treated immediately''')
     #st.plotly_chart(fig)
     
 
-    import docx
-    from docx2pdf import convert
-    import io
-    
-
-    doc1= docx.Document()
-
-    doc1.add_heading('Continuous Glucose Monitoring', 0)
-    doc1.add_heading('FROM -2021-08-25 TO 2021-10-08',3)
-    doc1.add_heading('American Diabetes Association-HbA1c: 5.184',3)
-    doc1.add_heading('Average Daily Risk Range: 7.052',3)
-    doc1.add_heading('Percent time inside range 70-150: 99.117',3)
-    doc1.add_heading('Daily Average spike (>110): 8.23',3) 
-    doc1.add_fig2
-    
- 
-    bio = io.BytesIO()
-    doc1.save(bio)
 
 
     st.download_button(
