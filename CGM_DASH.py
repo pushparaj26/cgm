@@ -142,7 +142,7 @@ def perform_analysis(glucose):
             color='group_status:N',
             ).properties(width=50)
             
-    st.altair_chart(bar_rounded, theme="streamlit", use_container_width=True )
+    st.altair_chart(bar_rounded, use_container_width=True )
 
 
 
